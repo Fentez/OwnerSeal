@@ -1,0 +1,59 @@
+# ==========================================
+#        OwnerSeal Configuration File
+# ==========================================
+
+# Settings for the Owner's Seal item
+item:
+  # Base material used for the seal item
+  material: "ENCHANTED_BOOK"
+  # Display name of the item (supports MiniMessage formatting)
+  name: "<!italic><gold>Owner's Seal</gold>"
+  # Item lore lines (supports MiniMessage formatting)
+  lore:
+    - "<!italic><dark_gray>Ego sum possessor, hic orbis est meus</dark_gray>"
+    - "<!italic><dark_gray>(I am the owner, this creation is mine)</dark_gray>"
+    - ""
+    - "<!italic><green>[Left-Click in Inventory] on a Map or</green>"
+    - "<!italic><green>Smithing Template to protect it from copying.</green>"
+  # Maximum number of uses before the seal breaks
+  max-durability: 24
+
+# Crafting recipe configuration for the Owner's Seal
+recipe:
+  # Enable or disable the custom crafting recipe
+  enabled: true
+  # 3x3 crafting grid shape (use spaces for empty slots)
+  shape:
+    - "HHH"
+    - " G "
+    - " S "
+  # Materials mapped to the characters in the shape above
+  ingredients:
+    H: "HONEYCOMB"
+    G: "GOLD_INGOT"
+    S: "STICK"
+
+# General behavior settings
+settings:
+  # Cooldown in seconds between applying or removing a seal
+  cooldown-seconds: 3
+
+# Sound effects played during seal actions
+sounds:
+  apply-seal: "BLOCK_AMETHYST_BLOCK_CHIME"
+  remove-seal: "BLOCK_AMETHYST_BLOCK_CHIME"
+  break-seal: "ENTITY_ITEM_BREAK"
+  error: "ENTITY_VILLAGER_NO"
+
+# Plugin messages and lore tags (supports MiniMessage formatting)
+messages:
+  protected: "<!italic><red>Owner: <italic><author></red>"
+  copy-deny: "<!italic><red>Copying prohibited</red>"
+  not-yours: "<red>Hands off! This item was sealed by <author>!</red>"
+  reloaded: "<green>OwnerSeal configuration successfully reloaded!</green>"
+  no-permission: "<red>You do not have permission to use this command.</red>"
+  only-player: "<red>Only players can use this command!</red>"
+  hold-item: "<red>You must hold a sealed item in your main hand!</red>"
+  not-sealed: "<red>This item does not have an Owner's Seal!</red>"
+  unsealed: "<green>Owner's Seal successfully removed (Admin)!</green>"
+  usage: "<yellow>Usage: /ownerseal <reload|unseal></yellow>"
